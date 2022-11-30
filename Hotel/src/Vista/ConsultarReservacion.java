@@ -93,6 +93,7 @@ public class ConsultarReservacion extends JFrame implements ActionListener {
 				if(cont==1) {
 					C_ConsultaReserva c = new C_ConsultaReserva(numRes);
 					c.ConsultaReserva();
+					vp=new VentanaPrincipal ("Hotel Las Gaviotas");
 					dispose();
 				}
 				else {

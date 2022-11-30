@@ -209,6 +209,7 @@ public class ConsultarDisponibilidad extends JFrame implements ActionListener {
 		if(cont==2) {
 			C_ConsultarDisponibilidad cd = new C_ConsultarDisponibilidad(fechaLlegada, fechaSalida, tipoHab);
 			cd.ConsultarDisponibilidad();
+			vp=new VentanaPrincipal ("Hotel Las Gaviotas");
 			dispose();
 		}
 		else {
