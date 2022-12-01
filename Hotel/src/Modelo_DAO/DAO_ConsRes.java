@@ -84,9 +84,10 @@ public class DAO_ConsRes {
 			    	
 			    }
 			}
-			else
+			else {
 				javax.swing.JOptionPane.showMessageDialog(null,"RESERVACION NO ENCONTRADA.", "RESERVACION", JOptionPane.ERROR_MESSAGE);
-			
+				vp=new VentanaPrincipal ("Hotel Las Gaviotas");
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

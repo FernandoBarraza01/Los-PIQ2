@@ -66,8 +66,10 @@ public class DAO_ConsDisp {
 			    c.setHabDis(c.getHabDis()-count);
 				
 				
-				if(c.getHabDis()==0) 
+				if(c.getHabDis()==0) {
 					javax.swing.JOptionPane.showMessageDialog(null,"NO HAY DISPONIBILIDAD", "CONSULTA EXITOSA", JOptionPane.INFORMATION_MESSAGE);	
+					vp=new VentanaPrincipal ("Hotel Las Gaviotas");
+				}
 				else
 					rd= new ResultadosDisponibilidad("Resultados");
 			}
