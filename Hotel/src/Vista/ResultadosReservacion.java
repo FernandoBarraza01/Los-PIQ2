@@ -106,15 +106,15 @@ public class ResultadosReservacion extends JDialog implements ActionListener {
 		
 		botonMod.setMnemonic('M');
 		botonMod.setMnemonic('m');
-		botonMod.setToolTipText("Presione ALT+M para Buscar");
+		botonMod.setToolTipText("Presione ALT+M para Modificar");
 		
 		botonCanc.setMnemonic('C');
 		botonCanc.setMnemonic('c');
-		botonCanc.setToolTipText("Presione ALT+C para Buscar");
+		botonCanc.setToolTipText("Presione ALT+C para Cancelar reservación");
 		
 		botonSalir.setMnemonic('E');
 		botonSalir.setMnemonic('e');
-		botonSalir.setToolTipText("Presione ALT+E para Buscar");
+		botonSalir.setToolTipText("Presione ALT+E para Salir");
 		
 		
 		setVisible(true);
