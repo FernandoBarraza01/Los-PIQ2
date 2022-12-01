@@ -32,10 +32,6 @@ public class ResultadosReservacion extends JFrame implements ActionListener {
 		setResizable(false);
 		setLocationRelativeTo(this);
 		
-		
-		
-		
-		
 		panel1=new JPanel();
 		panel2=new JPanel();
 		
