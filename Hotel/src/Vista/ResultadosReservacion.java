@@ -104,6 +104,18 @@ public class ResultadosReservacion extends JDialog implements ActionListener {
 		botonCanc.setHorizontalAlignment(SwingConstants.CENTER);
 		botonSalir.setHorizontalAlignment(SwingConstants.CENTER);
 		
+		botonMod.setMnemonic('M');
+		botonMod.setMnemonic('m');
+		botonMod.setToolTipText("Presione ALT+M para Buscar");
+		
+		botonCanc.setMnemonic('C');
+		botonCanc.setMnemonic('c');
+		botonCanc.setToolTipText("Presione ALT+C para Buscar");
+		
+		botonSalir.setMnemonic('E');
+		botonSalir.setMnemonic('e');
+		botonSalir.setToolTipText("Presione ALT+E para Buscar");
+		
 		
 		setVisible(true);
 	}
