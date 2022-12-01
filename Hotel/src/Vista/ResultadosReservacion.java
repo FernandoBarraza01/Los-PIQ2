@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-public class ResultadosReservacion extends JDialog implements ActionListener {
+public class ResultadosReservacion extends JFrame implements ActionListener {
 	
 	JPanel panel1, panel2;
 	JLabel label1, label2, label3, label4, label5, label6, label7, label8;
@@ -30,10 +30,10 @@ public class ResultadosReservacion extends JDialog implements ActionListener {
 		setSize(800, 600);
 		setTitle(titulo);
 		setResizable(false);
-		setLocationRelativeTo(null);
+		setLocationRelativeTo(this);
 		
-		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		//setModal(true);
+		
+		
 		
 		
 		panel1=new JPanel();
@@ -116,7 +116,7 @@ public class ResultadosReservacion extends JDialog implements ActionListener {
 		botonSalir.setMnemonic('e');
 		botonSalir.setToolTipText("Presione ALT+E para Salir");
 		
-		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 	}
 
