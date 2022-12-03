@@ -11,10 +11,12 @@ import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
+import Controlador.C_ModificarReservacion;
 import Controlador.ValidarDatos;
 
 public class ModificarReservacion extends JFrame implements ActionListener {
@@ -213,6 +215,60 @@ public class ModificarReservacion extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+if(e.getSource()==this.botonCanc) {
+			
+			if(vp!=null) {
+				vp.dispose();		
+			}
+			dispose();
+			vp= new VentanaPrincipal("Hotel Las Gaviotas");
+			
+		}
+		
+		if(e.getSource()==this.botonMod) {
+			String fechaLlegada= null, fechaSalida= null, tipoHab=null;
+			int idRes = Integer.parseInt(String.valueOf(texto.getText()));
+			Double precio=0.0;
+			int cont=0;
+			
+			if(sencilla.isSelected()) 
+				tipoHab = "sencilla";
+			else 
+				tipoHab="doble";
+
+			if(vd.ValidarFecha(dia.getSelectedIndex(), mes.getSelectedIndex(), year.getSelectedIndex())) {
+				fechaLlegada=  year.getSelectedItem()+"/"+mes.getSelectedItem()+"/"+dia.getSelectedItem();
+				cont++;
+			}
+			
+			else 
+				javax.swing.JOptionPane.showMessageDialog(null,"RESERVACION NO EXITOSA. REVISAR FECHA DE LLEGADA", "ERROR", JOptionPane.ERROR_MESSAGE);
+			
+			if(vd.ValidarFecha(diaS.getSelectedIndex(), mesS.getSelectedIndex(), yearS.getSelectedIndex())) {
+				fechaSalida= yearS.getSelectedItem()+"/"+mesS.getSelectedItem()+"/"+diaS.getSelectedItem();
+				cont++;
+			}
+			else 
+				javax.swing.JOptionPane.showMessageDialog(null,"RESERVACION NO EXITOSA. REVISAR FECHA DE SALIDA", "ERROR", JOptionPane.ERROR_MESSAGE);
+			
+			if(vd.ValidarPrecio(textod.getText())) {
+				precio= Double.parseDouble(String.valueOf(textod.getText()));
+				cont++;
+			}
+			else 
+				javax.swing.JOptionPane.showMessageDialog(null,"RESERVACION NO EXITOSA. REVISAR PRECIO", "ERROR", JOptionPane.ERROR_MESSAGE);
+			
+			if(cont==3) {
+				C_ModificarReservacion m = new C_ModificarReservacion(idRes,fechaLlegada, fechaSalida, tipoHab, precio);
+				m.Reservacion();
+			
+			}
+			else {
+				javax.swing.JOptionPane.showMessageDialog(null,"RESERVACION NO EXITOSA. REVISAR DATOS", "ERROR", JOptionPane.ERROR_MESSAGE);
+				cont=0;
+			}
+				
+		}
 		
 	}
 }
