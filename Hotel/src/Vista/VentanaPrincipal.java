@@ -26,6 +26,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 	JLabel etiqueta, label1, label2;
 	Registro rh;
 	ConsultarDisponibilidad cd;
+	ConsultarReservacion cr;
 	
 
 
@@ -83,9 +84,9 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 		botonRes.setToolTipText("Presione ALT+R para Consultar reservacion");
 		botonRes.addActionListener(this);
 		
-		botonHos.setMnemonic('H');
-		botonHos.setMnemonic('h');
-		botonHos.setToolTipText("Presione ALT+H para Consultar cliente");
+		botonHos.setMnemonic('C');
+		botonHos.setMnemonic('c');
+		botonHos.setToolTipText("Presione ALT+C para Consultar cliente");
 		botonHos.addActionListener(this);
 		
 		botonSalir.setMnemonic('E');
@@ -109,6 +110,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 	
+	
 	if(e.getSource()==botonDis) {
 		if(cd!=null) {
 			cd.dispose();		
@@ -116,6 +118,15 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 		dispose();
 		cd = new ConsultarDisponibilidad("Consulta de Disponibilidad");
 		        
+	}
+	
+	if(e.getSource()==botonRes) {
+		if(cr!=null) {
+			cr.dispose();		
+		}
+		dispose();
+		cr = new ConsultarReservacion("Reservacion");
+				
 	}
 	
 	if(e.getSource()==botonSalir) {

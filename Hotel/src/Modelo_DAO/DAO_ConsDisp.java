@@ -70,10 +70,8 @@ public class DAO_ConsDisp {
 					javax.swing.JOptionPane.showMessageDialog(null,"NO HAY DISPONIBILIDAD", "CONSULTA EXITOSA", JOptionPane.INFORMATION_MESSAGE);	
 					vp=new VentanaPrincipal ("Hotel Las Gaviotas");
 				}
-				else {
+				else
 					rd= new ResultadosDisponibilidad("Resultados");
-					
-				}
 			}
 			
 		} catch (SQLException e) {
