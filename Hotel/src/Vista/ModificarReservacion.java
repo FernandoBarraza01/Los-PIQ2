@@ -45,11 +45,9 @@ public class ModificarReservacion extends JFrame implements ActionListener {
 		panel.setBackground(Color.LIGHT_GRAY);
 		panel.setLayout(null);
 		vd= new ValidarDatos();
-
 		
-
-		// ETIQUETAS
-		// TITULO PRINCIPAL
+		//Titulo
+		
 		eti = new JLabel();
 		eti.setText("Datos a modificar");
 		eti.setBounds(200, 5, 300, 80);
