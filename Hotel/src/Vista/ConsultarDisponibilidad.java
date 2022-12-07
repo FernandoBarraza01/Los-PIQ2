@@ -52,6 +52,10 @@ public class ConsultarDisponibilidad extends JFrame implements ActionListener {
 		label1 = new JLabel("Tipo de Habitacion ");
 		label2 = new JLabel("Fecha de Llegada");
 		label4 = new JLabel("Fecha de Salida");
+		//label3 = new JLabel("Consulta Disponibilidad ");
+		//label3.setFont(new Font("SERIF", Font.ITALIC, 25));
+		//label3.setForeground(Color.BLUE);
+		
 		
 		
 		hab=new ButtonGroup();
@@ -124,6 +128,9 @@ public class ConsultarDisponibilidad extends JFrame implements ActionListener {
 		
 		panel2.add(botonBus);
 		panel2.add(botonCanc);
+		
+		//panel3.add(label3);
+		
 		panel1.add(label1);
 		panel1.add(sencilla);
 		panel1.add(doble);
@@ -166,7 +173,7 @@ public class ConsultarDisponibilidad extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+		// TODO Auto-generated method stub
 		String fechaLlegada= null, fechaSalida=null, tipoHab =null;
 		int cont=0;
 		
