@@ -124,7 +124,6 @@ public class ConsultarDisponibilidad extends JFrame implements ActionListener {
 		panel2.add(botonBus);
 		panel2.add(botonCanc);
 		
-		//panel3.add(label3);
 		
 		panel1.add(label1);
 		panel1.add(sencilla);

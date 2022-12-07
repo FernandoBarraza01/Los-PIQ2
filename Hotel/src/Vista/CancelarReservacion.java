@@ -61,9 +61,6 @@ public class CancelarReservacion extends JFrame implements ActionListener {
 			text2.setBounds(100, 100, 400, 150);
 			panel.add(text2);
 
-			/*JLabel text3 = new JLabel("Descripcion:");
-			text3.setBounds(100, 170, 400, 150);
-			panel.add(text3);*/
 
 		}
 
@@ -73,26 +70,31 @@ public class CancelarReservacion extends JFrame implements ActionListener {
 			campo1.setEditable(false);
 			panel.add(campo1);
 
-			/*JTextArea campo2 = new JTextArea();
-			campo2.setBounds(250, 230, 400, 150);
-			panel.add(campo2);
-			campo2.setLineWrap(true);*/
 			
 		}
 
 		public void agregar_botones() {
-			botonSalir = new JButton("Volver a la pantalla de inicio");
-			botonSalir.setBounds(100, 450, 300, 30);
-			botonSalir.setEnabled(true);
-			panel.add(botonSalir);
-			botonSalir.addActionListener(this);
-
+			
 			botonConf = new JButton("Confirmar");
 			botonConf.setBounds(450, 450, 300, 30);
 			botonConf.setEnabled(true);
 			panel.add(botonConf);
 			botonConf.addActionListener(this);
-
+			
+			botonSalir = new JButton("Volver a la pantalla de inicio");
+			botonSalir.setBounds(100, 450, 300, 30);
+			botonSalir.setEnabled(true);
+			panel.add(botonSalir);
+			botonSalir.addActionListener(this);
+			
+			botonConf.setMnemonic('C');
+			botonConf.setMnemonic('c');
+			botonConf.setToolTipText("Presione ALT+C para Cancelar reservación");
+			
+			botonSalir.setMnemonic('E');
+			botonSalir.setMnemonic('e');
+			botonSalir.setToolTipText("Presione ALT+E para Salir");
+			
 		}
 
 		public void actionPerformed(ActionEvent e) {
