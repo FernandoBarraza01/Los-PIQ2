@@ -7,7 +7,6 @@ public class Principal {
 
 		VentanaPrincipal vp = null;
 		
-		
 		if(vp!=null) {
 			vp.dispose();		
 		}
