@@ -115,11 +115,14 @@ public class ModificarReservacion extends JFrame implements ActionListener {
 		panel.add(botonCanc);
 		botonCanc.setForeground(Color.BLACK);
 		botonCanc.addActionListener(this);
-
-		// COMBOBOX
 		
+		botonMod.setMnemonic('M');
+		botonMod.setMnemonic('m');
+		botonMod.setToolTipText("Presione ALT+M para Modificar");
 		
-		
+		botonCanc.setMnemonic('E');
+		botonCanc.setMnemonic('e');
+		botonCanc.setToolTipText("Presione ALT+E para Salir");
 		hab=new ButtonGroup();
 		
 		sencilla = new JRadioButton("Sencilla",true);

@@ -1,7 +1,9 @@
 package Vista;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,7 +25,7 @@ public class CancelarReservacion extends JFrame implements ActionListener {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-		JPanel panel;
+		JPanel panel,panel2;
 		JButton botonSalir;
 		JButton botonConf;
 		VentanaPrincipal vp;
@@ -32,7 +34,7 @@ public class CancelarReservacion extends JFrame implements ActionListener {
 		public CancelarReservacion() {
 			setSize(800, 600);
 			setTitle("Cancelar Reservacion");
-			setLocationRelativeTo((Component) null);
+			setLocationRelativeTo(null);
 			setResizable(false);
 			iniciar();
 			etiquetas();
@@ -47,7 +49,11 @@ public class CancelarReservacion extends JFrame implements ActionListener {
 			panel = new JPanel();
 			panel.setLayout(null);
 			panel.setBackground(Color.LIGHT_GRAY);
-			this.getContentPane().add(panel);
+			add(panel,BorderLayout.CENTER);
+			
+			panel2 = new JPanel();
+			panel2.setBackground(Color.LIGHT_GRAY);
+			add(panel2,BorderLayout.SOUTH);
 
 		}
 
@@ -61,9 +67,6 @@ public class CancelarReservacion extends JFrame implements ActionListener {
 			text2.setBounds(100, 100, 400, 150);
 			panel.add(text2);
 
-			/*JLabel text3 = new JLabel("Descripcion:");
-			text3.setBounds(100, 170, 400, 150);
-			panel.add(text3);*/
 
 		}
 
@@ -73,26 +76,34 @@ public class CancelarReservacion extends JFrame implements ActionListener {
 			campo1.setEditable(false);
 			panel.add(campo1);
 
-			/*JTextArea campo2 = new JTextArea();
-			campo2.setBounds(250, 230, 400, 150);
-			panel.add(campo2);
-			campo2.setLineWrap(true);*/
 			
 		}
 
 		public void agregar_botones() {
-			botonSalir = new JButton("Volver a la pantalla de inicio");
-			botonSalir.setBounds(100, 450, 300, 30);
-			botonSalir.setEnabled(true);
-			panel.add(botonSalir);
-			botonSalir.addActionListener(this);
-
+			
 			botonConf = new JButton("Confirmar");
 			botonConf.setBounds(450, 450, 300, 30);
 			botonConf.setEnabled(true);
-			panel.add(botonConf);
 			botonConf.addActionListener(this);
-
+			
+			botonSalir = new JButton("Volver a la pantalla de inicio");
+			botonSalir.setBounds(100, 450, 300, 30);
+			botonSalir.setEnabled(true);
+			botonSalir.addActionListener(this);
+			
+			botonConf.setMnemonic('C');
+			botonConf.setMnemonic('c');
+			botonConf.setToolTipText("Presione ALT+C para Cancelar reservación");
+			
+			botonSalir.setMnemonic('E');
+			botonSalir.setMnemonic('e');
+			botonSalir.setToolTipText("Presione ALT+E para Salir");
+			panel2.add(botonConf);
+			panel2.add(botonSalir);
+			
+			
+			
+			
 		}
 
 		public void actionPerformed(ActionEvent e) {
@@ -111,7 +122,7 @@ public class CancelarReservacion extends JFrame implements ActionListener {
 				int numRes= 0;
 				numRes= Integer.parseInt(String.valueOf(campo1.getText()));
 				int op;
-				op= javax.swing.JOptionPane.showConfirmDialog(null,"¿SEGURO?", "CANCELACION", JOptionPane.YES_NO_OPTION);	
+				op= javax.swing.JOptionPane.showConfirmDialog(null,"¿DESEA CANCELAR LA RESERVACION?", "CANCELACION", JOptionPane.YES_NO_OPTION);	
 				
 				if(op==0) {
 					C_CancelarReservacion c = new C_CancelarReservacion(numRes, status);

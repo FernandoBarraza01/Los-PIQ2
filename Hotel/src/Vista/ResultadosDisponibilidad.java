@@ -11,7 +11,9 @@ import javax.swing.JPanel;
 
 public class ResultadosDisponibilidad extends JFrame implements ActionListener {
 	
-	JButton botonReservar ,botonResgistrar,botonPantallaInicio;
+	JButton botonReservar ;
+	JButton botonRegistrar;
+	JButton botonPantallaInicio;
     JLabel etiqueta;
     VentanaPrincipal vp;
     RealizarReservacion rere;
@@ -39,15 +41,27 @@ public class ResultadosDisponibilidad extends JFrame implements ActionListener {
 	panel.add(botonReservar);
 	botonReservar.addActionListener(this);
 	        
-	botonResgistrar=new JButton("Registro de huesped");
-	botonResgistrar.setBounds(400, 250, 200, 30);
-	panel.add(botonResgistrar);
-	botonResgistrar.addActionListener(this);
+	botonRegistrar=new JButton("Registro de huesped");
+	botonRegistrar.setBounds(400, 250, 200, 30);
+	panel.add(botonRegistrar);
+	botonRegistrar.addActionListener(this);
 	        
 	botonPantallaInicio=new JButton("Volver a la pantalla de inicio");
 	botonPantallaInicio.setBounds(250, 350, 300, 30);
 	panel.add(botonPantallaInicio);
 	botonPantallaInicio.addActionListener(this);
+	
+	botonReservar.setMnemonic('R');
+	botonReservar.setMnemonic('r');
+	botonReservar.setToolTipText("Presione ALT+R para Realizar una reservación");
+	
+	botonRegistrar.setMnemonic('H');
+	botonRegistrar.setMnemonic('h');
+	botonRegistrar.setToolTipText("Presione ALT+H para Registrar un huésped");
+	
+	botonPantallaInicio.setMnemonic('E');
+	botonPantallaInicio.setMnemonic('e');
+	botonPantallaInicio.setToolTipText("Presione ALT+e para Salir");
 	
         setResizable(false);
         setVisible(true);
@@ -63,7 +77,7 @@ public class ResultadosDisponibilidad extends JFrame implements ActionListener {
             rere= new  RealizarReservacion("Reservacion");
 	}
         
-        if (e.getSource() == this.botonResgistrar) {
+        if (e.getSource() == this.botonRegistrar) {
             if(reg!=null) {
             	reg.dispose();		
             }
