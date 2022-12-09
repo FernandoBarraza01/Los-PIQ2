@@ -35,6 +35,7 @@ public class Ingreso extends JFrame implements ActionListener {
 		setTitle("Hotel Las Gaviotas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 700, 400);
+		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -59,8 +60,15 @@ public class Ingreso extends JFrame implements ActionListener {
 		btModificar.setBounds(358, 221, 120, 25);
 		panel.add(btModificar);
 		btModificar.addActionListener(this);
-
-
+		
+		btnEntrar.setMnemonic('A');
+		btnEntrar.setMnemonic('A');
+		btnEntrar.setToolTipText("Presione ALT+A para Acceder");
+		
+		btModificar.setMnemonic('M');
+		btModificar.setMnemonic('m');
+		btModificar.setToolTipText("Presione ALT+M para Cambiar clave");
+		
 		
 		JLabel lblBgImage = new JLabel();
 		Image imagen=(new ImageIcon(Ingreso.class.getResource("/Images/playa.png"))).getImage();
