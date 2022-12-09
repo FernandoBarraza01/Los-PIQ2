@@ -61,7 +61,7 @@ public class ResultadosDisponibilidad extends JFrame implements ActionListener {
 	
 	botonPantallaInicio.setMnemonic('E');
 	botonPantallaInicio.setMnemonic('e');
-	botonPantallaInicio.setToolTipText("Presione ALT+e para Salir");
+	botonPantallaInicio.setToolTipText("Presione ALT+E para Salir");
 	
         setResizable(false);
         setVisible(true);

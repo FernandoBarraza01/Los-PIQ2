@@ -59,9 +59,9 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 		
 		etiqueta.setHorizontalAlignment(SwingConstants.CENTER);
 		
-		panel1.setBackground(Color.WHITE);
-		panel2.setBackground(Color.CYAN);
-		panel3.setBackground(Color.WHITE);
+		panel1.setBackground(Color.LIGHT_GRAY);
+		panel2.setBackground(Color.LIGHT_GRAY);
+		panel3.setBackground(Color.LIGHT_GRAY);
 		add(panel1,BorderLayout.CENTER);
 		add(panel2,BorderLayout.SOUTH);
 		add(panel3,BorderLayout.NORTH);
