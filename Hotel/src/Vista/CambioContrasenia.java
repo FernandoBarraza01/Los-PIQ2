@@ -17,7 +17,7 @@ import java.awt.Container;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class CambioContrasenia extends JFrame {
+public class CambioContrasenia extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -27,7 +27,8 @@ public class CambioContrasenia extends JFrame {
 	private JLabel PsswrdNew;
 	private JTextField ConfirmPsswrd;
 	private JLabel PsswrdConfirm;
-
+	JButton btnAceptar;
+	JButton btnCancelar;
 
 	
 	public CambioContrasenia() {
@@ -83,17 +84,41 @@ public class CambioContrasenia extends JFrame {
 		placeholderCP.changeAlpha(0.75f);
 		placeholderCP.changeStyle(Font.ITALIC);
 		
-		JButton btnAceptar = new JButton("Aceptar");
+		btnAceptar = new JButton("Aceptar");
 		btnAceptar.setBounds(30, 250, 90, 25);
 		contentPane.add(btnAceptar);
+		btnAceptar.addActionListener(this);
 		
-		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(150, 250, 90, 25);
 		contentPane.add(btnCancelar);
+		btnCancelar.addActionListener(this);
 		
 		/* Event Listeners */ 
 		setVisible(true);
 	
+	}
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==btnAceptar) {
+			
+		}
+		if(e.getSource()==btnCancelar) {
+			Ingreso in = null;
+			
+			if(in!=null) {
+				in.dispose();		
+			}
+			else {
+				in= new Ingreso();
+			}
+		}
+		}
+		
+		
 	}
 
 }
