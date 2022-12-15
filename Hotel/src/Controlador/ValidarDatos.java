@@ -32,6 +32,13 @@ public class ValidarDatos {
 		
 	}
 	
+	public boolean ValidarClave(String claveing) {
+		if(!claveing.equals(""))
+			return true;
+		else
+			return false;
+	}
+	
 	public boolean NoReserva(String numRes) {
 		try {
 			int num= Integer.parseInt(String.valueOf(numRes));

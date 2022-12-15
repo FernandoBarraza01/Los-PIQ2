@@ -5,10 +5,15 @@ import java.awt.Image;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Controlador.C_Ingreso;
+import Controlador.ValidarDatos;
+
 import java.awt.BorderLayout;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import java.awt.Font;
 import java.awt.event.ActionListener;
@@ -23,10 +28,8 @@ public class Ingreso extends JFrame implements ActionListener {
 	private JPasswordField passwordField;
 	private JLabel lblIngreseContrasea;
 	private JLabel lblShow;
-
-	/**
-	 * Test function for launch the window.
-	 */
+	ValidarDatos vd;
+	VentanaPrincipal vp;
 	JButton btnEntrar;
 	JButton btModificar;
 	
@@ -38,7 +41,7 @@ public class Ingreso extends JFrame implements ActionListener {
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
+		vd= new ValidarDatos();
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
@@ -108,9 +111,29 @@ public class Ingreso extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		int cont=0;
+		C_Ingreso i1=null;
+		int band=1;
 		if(e.getSource()==btnEntrar) {
-			System.out.println("Cualquier pendejada");
+			char[] arrayClave=passwordField.getPassword();
+			String clave=new String(arrayClave);
+			if(vd.ValidarClave(clave))
+				cont++;
+			else
+				javax.swing.JOptionPane.showMessageDialog(null,"INGRESE UNA CLAVE DE DESBLOQUEO", "ERROR", JOptionPane.ERROR_MESSAGE);
+			if(cont==1)
+				i1 = new C_Ingreso(clave);
+			if(i1.Ingreso())
+				if(vp!=null) {
+					vp.dispose();		
+				}
+				else {
+					dispose();
+					vp= new VentanaPrincipal("Hotel Las Gaviotas");
+				}
+			
+			else
+				javax.swing.JOptionPane.showMessageDialog(null,"CLAVE INCORRECTA. VUELVA A INTENTARLO", "ACCESO DENEGADO", JOptionPane.ERROR_MESSAGE);
 		}
 		if(e.getSource()==btModificar) {
 			System.out.println("Cualquier pendejada");
