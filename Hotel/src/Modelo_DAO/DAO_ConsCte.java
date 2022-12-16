@@ -1,6 +1,7 @@
 package Modelo_DAO;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,6 +17,9 @@ import Vista.ConsultarCliente;
 import Vista.ResultadosCliente;
 import Vista.VentanaPrincipal;
 
+/*
+ * @author Fernando Barraza 
+ */
 public class DAO_ConsCte {
 	
 	String usuario="root";

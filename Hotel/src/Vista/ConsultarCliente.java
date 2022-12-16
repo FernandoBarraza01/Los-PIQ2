@@ -15,7 +15,9 @@ import javax.swing.JTextField;
 import Controlador.C_ConsultarCliente;
 import Controlador.C_Reservacion;
 import Controlador.ValidarDatos;
-
+/*
+ * @author Fernando Barraza 
+ */
 
 
 public class ConsultarCliente extends JFrame implements ActionListener {

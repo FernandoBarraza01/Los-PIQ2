@@ -1,5 +1,9 @@
 package Modelo_DAO;
 
+/*
+ * @author Fernando Barraza 
+ */
+
 public class C3 {
 	
 	private String nombre, apellidos, fechaLlegada, fechaSalida;

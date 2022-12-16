@@ -1,6 +1,9 @@
 package Modelo_DAO;
 
 import Vista.ResultadosCliente;
+/*
+ * @author Fernando Barraza 
+ */
 
 public class M_ConsultarCliente {
 	

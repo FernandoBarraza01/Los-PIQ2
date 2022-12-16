@@ -2,7 +2,9 @@ package Controlador;
 
 import Modelo_DAO.M_ConsultarCliente;
 import Modelo_DAO.M_RealizarReservacion;
-
+/*
+ * @author Fernando Barraza 
+ */
 public class C_ConsultarCliente {
 	
 	String  nombre, apellido;
