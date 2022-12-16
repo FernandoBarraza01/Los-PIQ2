@@ -27,6 +27,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 	Registro rh;
 	ConsultarDisponibilidad cd;
 	ConsultarReservacion cr;
+	ConsultarCliente cc;
 	
 
 
@@ -126,6 +127,15 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 		}
 		dispose();
 		cr = new ConsultarReservacion("Reservacion");
+				
+	}
+	
+	if(e.getSource()==botonHos) {
+		if(cc!=null) {
+			cc.dispose();		
+		}
+		dispose();
+		cc = new ConsultarCliente("Consultar un cliente");
 				
 	}
 	
