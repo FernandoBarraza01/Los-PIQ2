@@ -1,4 +1,7 @@
 package Modelo_DAO;
+/*
+ * @author Juan Pablo Trejo
+ */
 
 public class M_CambioContr {
 	String claveOld;

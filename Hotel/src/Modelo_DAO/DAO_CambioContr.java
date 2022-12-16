@@ -1,5 +1,5 @@
 package Modelo_DAO;
-//repos
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,7 +8,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.swing.JOptionPane;
-
+/*
+ * @author Juan Pablo Trejo
+ */
 public class DAO_CambioContr {
 	String usuario="root";
 	String contrasena="user123";

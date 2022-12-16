@@ -1,4 +1,7 @@
 package Controlador;
+/*
+ * @author Juan Pablo Trejo
+ */
 
 import Modelo_DAO.M_CambioContr;
 

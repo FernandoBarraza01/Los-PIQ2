@@ -1,4 +1,7 @@
 package Modelo_DAO;
+/*
+ * @author Juan Pablo Trejo
+ */
 
 public class Ing2 {
 	private String claveOld;

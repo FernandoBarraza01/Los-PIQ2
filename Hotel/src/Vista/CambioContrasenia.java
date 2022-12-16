@@ -20,7 +20,9 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+/*
+ * @author Juan Pablo Trejo
+ */
 public class CambioContrasenia extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
