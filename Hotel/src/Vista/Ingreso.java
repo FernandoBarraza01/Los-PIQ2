@@ -32,6 +32,7 @@ public class Ingreso extends JFrame implements ActionListener {
 	VentanaPrincipal vp;
 	JButton btnEntrar;
 	JButton btModificar;
+	CambioContrasenia cc;
 	
 	public Ingreso() {
 		setResizable(false);
@@ -136,7 +137,12 @@ public class Ingreso extends JFrame implements ActionListener {
 				javax.swing.JOptionPane.showMessageDialog(null,"CLAVE INCORRECTA. VUELVA A INTENTARLO", "ACCESO DENEGADO", JOptionPane.ERROR_MESSAGE);
 		}
 		if(e.getSource()==btModificar) {
-			System.out.println("Cualquier pendejada");
+			if(cc!=null) {
+				cc.dispose();		
+			}
+			dispose();
+			
+			cc= new CambioContrasenia();
 		}
 	}
 }
