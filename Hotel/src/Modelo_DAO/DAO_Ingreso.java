@@ -1,4 +1,7 @@
 package Modelo_DAO;
+/*
+ * @author Luis Fernando Lopez
+ */
 
 import java.sql.Connection;
 import java.sql.DriverManager;

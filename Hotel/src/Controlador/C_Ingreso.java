@@ -1,5 +1,7 @@
 package Controlador;
-
+/*
+ * @author Luis Fernando Lopez
+ */
 import Modelo_DAO.M_ConsultarDisponibilidad;
 import Modelo_DAO.M_Ingreso;
 

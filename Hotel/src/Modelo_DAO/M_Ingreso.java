@@ -1,4 +1,7 @@
 package Modelo_DAO;
+/*
+ * @author Luis Fernando Lopez
+ */
 
 public class M_Ingreso {
 	String clave;

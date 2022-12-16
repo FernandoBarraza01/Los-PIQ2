@@ -1,4 +1,7 @@
 package Modelo_DAO;
+/*
+ * @author Luis Fernando Lopez
+ */
 
 public class Ing1 {
 	private String claveing;

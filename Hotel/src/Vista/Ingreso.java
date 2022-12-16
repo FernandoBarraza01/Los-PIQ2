@@ -20,7 +20,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
-
+/*
+ * @author Luis Fernando Lopez
+ */
 public class Ingreso extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
