@@ -99,10 +99,16 @@ public class CambioContrasenia extends JFrame implements ActionListener {
 		btnCancelar.setBounds(150, 250, 90, 25);
 		contentPane.add(btnCancelar);
 		btnCancelar.addActionListener(this);
-		
-		/* Event Listeners */ 
-		setVisible(true);
 	
+		btnCancelar.setMnemonic('E');
+		btnCancelar.setMnemonic('e');
+		btnCancelar.setToolTipText("Presione ALT+E para Cancelar");
+	
+		btnAceptar.setMnemonic('M');
+		btnAceptar.setMnemonic('m');
+		btnAceptar.setToolTipText("Presione ALT+M para Modificar Clave");
+		
+		setVisible(true);	
 	}
 
 
