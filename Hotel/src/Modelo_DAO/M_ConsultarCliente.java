@@ -26,6 +26,7 @@ public class M_ConsultarCliente {
 			return false;
 	}
 	
+	//No permite que el nombre o apellidos sean nulos
 	public boolean ValidarNombreApellido(String nombre, String apellido) {
 		if(nombre.equals("") || apellido.equals(""))
 			return false;
