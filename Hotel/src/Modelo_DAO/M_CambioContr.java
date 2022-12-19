@@ -42,6 +42,7 @@ public class M_CambioContr {
 				return false;
 	}
 	
+	//Antes de modificar la clave de desbloqueo, se debe confirmar la nueva clave, por ello se valida coincidencia entre ambas
 	public boolean CompararClaves(String claveNew,String claveConf) {
 		if(claveNew.equals(claveConf))
 			return true;
