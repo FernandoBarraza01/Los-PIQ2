@@ -19,6 +19,7 @@ public class M_Ingreso {
 		return ValidarClaves(clave,clavebd);
 	}
 	
+	//Valida que la clave ingresada coincide con la clave almacenada en la BD
 	public boolean ValidarClaves(String clave,String clavebd) {
 		if(clave.equals(clavebd))
 			return true;

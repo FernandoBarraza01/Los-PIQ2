@@ -14,6 +14,10 @@ public class Ing1 {
 	public String getClave() {
 		return claveing;
 	}
+	
+	public String getClavebd() {
+		return clavebd;
+	}
 
 	public void setClave(String clave) {
 		clavebd = clave;
