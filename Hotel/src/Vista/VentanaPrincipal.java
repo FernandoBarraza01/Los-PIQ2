@@ -27,6 +27,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 	Registro rh;
 	ConsultarDisponibilidad cd;
 	ConsultarReservacion cr;
+	ConsultarCliente cc;
 	
 
 
@@ -59,9 +60,9 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 		
 		etiqueta.setHorizontalAlignment(SwingConstants.CENTER);
 		
-		panel1.setBackground(Color.WHITE);
-		panel2.setBackground(Color.CYAN);
-		panel3.setBackground(Color.WHITE);
+		panel1.setBackground(Color.LIGHT_GRAY);
+		panel2.setBackground(Color.LIGHT_GRAY);
+		panel3.setBackground(Color.LIGHT_GRAY);
 		add(panel1,BorderLayout.CENTER);
 		add(panel2,BorderLayout.SOUTH);
 		add(panel3,BorderLayout.NORTH);
@@ -126,6 +127,15 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 		}
 		dispose();
 		cr = new ConsultarReservacion("Reservacion");
+				
+	}
+	
+	if(e.getSource()==botonHos) {
+		if(cc!=null) {
+			cc.dispose();		
+		}
+		dispose();
+		cc = new ConsultarCliente("Consultar un cliente");
 				
 	}
 	

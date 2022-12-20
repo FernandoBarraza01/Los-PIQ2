@@ -171,9 +171,9 @@ public class Registro extends JFrame implements ActionListener {
 		botonCanc.setToolTipText("Presione ALT+E para Cancelar");
 		botonCanc.addActionListener(this);
 		
-		botonConf.setMnemonic('A');
-		botonConf.setMnemonic('a');
-		botonConf.setToolTipText("Presione ALT+A para Confirmar");
+		botonConf.setMnemonic('H');
+		botonConf.setMnemonic('h');
+		botonConf.setToolTipText("Presione ALT+H para Confirmar");
 		botonConf.addActionListener(this);
 		
 		botonConf.setHorizontalAlignment(SwingConstants.CENTER);

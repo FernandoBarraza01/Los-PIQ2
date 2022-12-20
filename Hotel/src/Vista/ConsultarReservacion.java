@@ -61,9 +61,9 @@ public class ConsultarReservacion extends JFrame implements ActionListener {
 
 			botonCanc = new JButton("Cancelar");
 			botonCanc.setBounds(450, 300, 150, 30);
-			botonCanc.setMnemonic('C');
-			botonCanc.setMnemonic('c');
-			botonCanc.setToolTipText("Presione ALT+C para Cancelar");
+			botonCanc.setMnemonic('E');
+			botonCanc.setMnemonic('e');
+			botonCanc.setToolTipText("Presione ALT+E para Salir");
 			botonCanc.addActionListener(this);
 			panel.add(botonCanc);
 			

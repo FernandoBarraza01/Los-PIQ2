@@ -142,9 +142,9 @@ public class ConsultarDisponibilidad extends JFrame implements ActionListener {
 		
 		
 		
-		botonCanc.setMnemonic('C');
-		botonCanc.setMnemonic('c');
-		botonCanc.setToolTipText("Presione ALT+C para Cancelar");
+		botonCanc.setMnemonic('E');
+		botonCanc.setMnemonic('e');
+		botonCanc.setToolTipText("Presione ALT+E para Salir");
 		botonCanc.addActionListener(this);
 		
 		botonBus.setMnemonic('B');
