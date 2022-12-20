@@ -138,7 +138,6 @@ public class RealizarReservacion extends JFrame implements ActionListener{
 		add(panel1,BorderLayout.NORTH);
 		add(panel2,BorderLayout.CENTER);
 		add(panel3,BorderLayout.WEST);
-		//add(panel4,BorderLayout.EAST);
 		add(panel5,BorderLayout.SOUTH);
 		
 		
@@ -171,16 +170,15 @@ public class RealizarReservacion extends JFrame implements ActionListener{
 		panel4.add(etiqueta);
 		panel3.add(etiqueta);
 		
-		//panel4.setLayout(new GridLayout(1,3));
 	
 		botonCanc.setMnemonic('E');
 		botonCanc.setMnemonic('e');
 		botonCanc.setToolTipText("Presione ALT+E para Cancelar");
 		botonCanc.addActionListener(this);
 		
-		botonConf.setMnemonic('A');
-		botonConf.setMnemonic('a');
-		botonConf.setToolTipText("Presione ALT+A para Confirmar");
+		botonConf.setMnemonic('R');
+		botonConf.setMnemonic('r');
+		botonConf.setToolTipText("Presione ALT+R para Realizar reservación");
 		botonConf.addActionListener(this);
 
 		

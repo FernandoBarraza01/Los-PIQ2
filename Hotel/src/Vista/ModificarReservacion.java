@@ -262,6 +262,11 @@ if(e.getSource()==this.botonCanc) {
 			if(cont==3) {
 				C_ModificarReservacion m = new C_ModificarReservacion(idRes,fechaLlegada, fechaSalida, tipoHab, precio);
 				m.Reservacion();
+				if(vp!=null) {
+					vp.dispose();		
+				}
+				dispose();
+				vp= new VentanaPrincipal("Hotel Las Gaviotas");
 			
 			}
 			else {
