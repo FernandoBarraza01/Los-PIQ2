@@ -5,13 +5,13 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		VentanaPrincipal vp = null;
-
-		if(vp!=null) {
-			vp.dispose();		
+		Ingreso in = null;
+		
+		if(in!=null) {
+			in.dispose();		
 		}
 		else {
-			vp= new VentanaPrincipal("Hotel Las Gaviotas");
+			in= new Ingreso();
 		}
 	}
 }
